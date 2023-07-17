@@ -78,7 +78,7 @@ const Contact = () => {
             <input
               type='text'
               name='user_name'
-              value={form.name}
+              value={form.from_name}
               onChange={handleChange}
               placeholder="What's your good name?"
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
@@ -89,7 +89,7 @@ const Contact = () => {
             <input
               type='email'
               name='from_email'
-              value={form.email}
+              value={form.from_email}
               onChange={handleChange}
               placeholder="What's your web address?"
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
