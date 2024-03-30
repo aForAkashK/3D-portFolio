@@ -10,8 +10,8 @@ import { slideIn } from "../utils/motion";
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
-    from_name: "",
-    from_email: "",
+    user_name: "",
+    reply_to: "",
     message: "",
   });
 
@@ -30,6 +30,13 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
+    // Write validation for Feilds
+    console.log("form: ", form);
+    if (form.user_name === "" || form.reply_to === "" || form.message === "") {
+      setLoading(false);
+      alert("All fields are required.");
+      return;
+    }
 
     emailjs.sendForm(
       "service_dqugmut",
@@ -43,9 +50,9 @@ const Contact = () => {
           alert("Thank you. I will get back to you as soon as possible.");
 
           setForm({
-            from_name: "",
-    from_email: "",
-    message: "",
+            user_name: "",
+            reply_to: "",
+            message: "",
           });
         },
         (error) => {
@@ -78,7 +85,7 @@ const Contact = () => {
             <input
               type='text'
               name='user_name'
-              value={form.from_name}
+              value={form.user_name}
               onChange={handleChange}
               placeholder="What's your good name?"
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
@@ -88,8 +95,8 @@ const Contact = () => {
             <span className='text-white font-medium mb-4'>Your email</span>
             <input
               type='email'
-              name='from_email'
-              value={form.from_email}
+              name='reply_to'
+              value={form.reply_to}
               onChange={handleChange}
               placeholder="What's your web address?"
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'

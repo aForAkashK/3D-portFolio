@@ -28,6 +28,7 @@ import {
   upcric,
   cricct,
   playbig,
+  defender,
 } from "../assets";
 
 export const navLinks = [
@@ -216,7 +217,7 @@ const projects = [
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "MongoDB",
         color: "green-text-gradient",
       },
       {
@@ -225,6 +226,27 @@ const projects = [
       },
     ],
     image: playbig,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "Defender",
+    description:
+      "It's a Nextjs App, Which is Crash Game Where user can play and earn money and also can get exciting gifts",
+    tags: [
+      {
+        name: "nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "MongoDB",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Sass",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: defender,
     source_code_link: "https://github.com/",
   },
 ];

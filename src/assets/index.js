@@ -35,6 +35,7 @@ import tripguide from "./tripguide.png";
 import cricct from "./cricct.png";
 import playbig from "./playbig.png";
 import upcric from "./upcric.png";
+import defender from "./defender.png";
 
 export {
   logo,
@@ -70,4 +71,5 @@ export {
   upcric,
   playbig,
   cricct,
+  defender,
 };
